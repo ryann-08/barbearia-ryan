@@ -1,0 +1,64 @@
+
+.header {
+  position: fixed;         
+  top: 0;
+  left: 5%;
+  width: 90%;
+  z-index: 100;         
+  padding: 20px;
+  background: transparent; /* Começa transparente */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Transição suave */
+  border-radius: 25px;
+}
+
+/* Quando o usuário rolar a pagina, o fundo fica levemente escuro */
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(8px); /* Efeito de vidro fosco */
+}
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  cursor: default;
+}
+
+.logoDestaque {
+  color: #D4A853; /* Dourado */
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+.navLink {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #D4A853; 
+}

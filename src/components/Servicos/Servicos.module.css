@@ -1,0 +1,102 @@
+
+.servicos {
+  background-color: #E8E0D0;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+
+.titulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 48px;
+}
+
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  gap: 104px;
+  max-width: 2100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #1a1a1a;  
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.cardNome {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.cardDescricao {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1; 
+}
+
+
+.cardRodape {
+  display: flex;
+  align-items: center;
+  gap: 190px;
+}
+
+.preco {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #D4A853;
+}
+
+.btnAgendar {
+  background-color: #D4A853;
+  color: #111;
+  border: none;
+  padding: 10px 24px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.btnAgendar:hover {
+  background-color: #c09340;
+}
+
+.tempo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  .grade {
+    grid-template-columns: 1fr; 
+  }
+}

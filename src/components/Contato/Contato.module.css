@@ -1,0 +1,102 @@
+
+.contato {
+  background-color: #000000;
+  padding: 80px 60px;
+}
+
+/* Grade de 3 cards */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  max-width: 2100px;
+  margin: 0 auto 40px;
+}
+
+
+.card {
+  border: 2px solid #D4A853;
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: #D4A853;
+}
+
+.cardTopo {
+  margin-bottom: 24px;
+}
+
+.cardTitulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+/* Conteúdo do card: texto e icone lado a lado */
+.cardConteudo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardTexto {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.icone {
+  width: 32px;
+  height: 32px;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+/* Container do mapa */
+.mapaContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.mapa {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.entreContato {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  
+}
+
+.botaoContatos {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  border: 2px solid #D4A853;
+  padding: 16px 48px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+}

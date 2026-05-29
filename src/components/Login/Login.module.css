@@ -1,0 +1,233 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #1a1a1a;  
+  border: 2px solid #3a7bd5;  
+  border-radius: 12px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+
+.btnFechar {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.btnFechar:hover {
+  color: #fff;
+}
+
+
+.titulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.subtitulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: #aaa;
+  margin: 0 0 32px;
+  white-space: pre-line; 
+  line-height: 1.5;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campoGrupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 14px 48px 14px 16px; /* Espaço para o ícone à direita */
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+.input:focus {
+  border-color: #3a7bd5; 
+}
+
+
+.inputIcone {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #666;
+  pointer-events: none; 
+}
+
+
+.btnVerSenha {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.btnVerSenha:hover {
+  color: #fff;
+}
+
+.opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #D4A853;
+}
+
+.linkEsqueceu {
+  background: none;
+  border: none;
+  color: #D4A853;  
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.linkEsqueceu:hover {
+  color: #c09340;
+}
+
+.erro {
+  background-color: rgba(200, 50, 50, 0.2);
+  border: 1px solid #c83232;
+  color: #ff6b6b;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+.btnEntrar {
+  background-color: #F5D000;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 4px;
+}
+
+.btnEntrar:hover {
+  background-color: #e0be00;
+  transform: translateY(-1px);
+}
+
+
+.rodape {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  margin: 24px 0 0;
+}
+
+
+.linkCadastro {
+  background: none;
+  border: none;
+  color: #D4A853;  
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.linkCadastro:hover {
+  color: #c09340;
+}

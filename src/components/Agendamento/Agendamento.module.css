@@ -1,0 +1,399 @@
+
+.pagina {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  padding-bottom: 80px;
+}
+
+
+.cabecalho {
+  background-color: #1a1a1a;
+  padding: 32px 60px;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+  text-align: center;
+}
+
+.btnVoltarTopo {
+  background: none;
+  border: none;
+  color: #D4A853;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.btnVoltarTopo:hover {
+  color: #fff;
+}
+
+/* Título da página */
+.titulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+
+.subtitulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: #888;
+  margin: 0;
+}
+
+
+.conteudo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 60px;
+}
+
+
+.passo {
+  margin-bottom: 48px;
+}
+
+
+.passoTitulo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.numeroPasso {
+  width: 32px;
+  height: 32px;
+  background-color: #D4A853;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+
+.gradeServicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.cardServico {
+  background-color: #1a1a1a;
+  border: 2px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.cardServico:hover {
+  border-color: #D4A853;
+}
+
+
+.cardServico.selecionado {
+  border-color: #D4A853;
+  background-color: rgba(212, 168, 83, 0.1);
+}
+
+.servicoNome {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.servicoPreco {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #D4A853;
+}
+
+.servicoTempo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.gradeBarbeiros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.cardBarbeiro {
+  background-color: #1a1a1a;
+  border: 2px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.cardBarbeiro:hover {
+  border-color: #D4A853;
+}
+
+.cardBarbeiro.selecionado {
+  border-color: #D4A853;
+  background-color: rgba(212, 168, 83, 0.1);
+}
+
+/* Avatar circular com inicial do nome */
+.avatar {
+  width: 52px;
+  height: 52px;
+  background-color: #D4A853;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.barbeiroNome {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.barbeiroEspecialidade {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+
+.dataHorario {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.label {
+  display: block;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+
+.inputData {
+  background-color: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  width: 240px;
+  transition: border-color 0.2s ease;
+  color-scheme: dark; /* Deixa o seletor de data com tema escuro */
+}
+
+.inputData:focus {
+  border-color: #D4A853;
+}
+
+
+.gradeHorarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.btnHorario {
+  background-color: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.btnHorario:hover {
+  border-color: #D4A853;
+  color: #fff;
+}
+
+
+.horarioSelecionado {
+  border-color: #D4A853 !important;
+  background-color: rgba(212, 168, 83, 0.15) !important;
+  color: #D4A853 !important;
+}
+
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+
+.btnConfirmar {
+  background-color: #D4A853;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 64px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btnConfirmar:hover {
+  background-color: #c09340;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/* Tela de SUCESSO */
+/* ===================== */
+.paginaSucesso {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.cardSucesso {
+  background-color: #1a1a1a;
+  border: 2px solid #D4A853;
+  border-radius: 16px;
+  padding: 60px 48px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.iconeCheck {
+  width: 72px;
+  height: 72px;
+  background-color: #D4A853;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 auto 24px;
+}
+
+.tituloSucesso {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.textoSucesso {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  color: #888;
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+/* Resumo do agendamento */
+.resumo {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.resumo p {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.resumo strong {
+  color: #D4A853;
+}
+
+/* Botão voltar na tela de sucesso */
+.btnVoltar {
+  background-color: #D4A853;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 48px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btnVoltar:hover {
+  background-color: #c09340;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .conteudo {
+    padding: 32px 24px;
+  }
+
+  .gradeServicos,
+  .gradeBarbeiros {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho {
+    padding: 24px;
+  }
+}
