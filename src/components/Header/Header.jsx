@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
-import styles from './Header.module.css';
-
+import { useState, useEffect } from "react";
+import styles from "./Header.module.css";
 
 function Header({ onAgendar }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuAberto, setMenuaberto] = useState(false);
 
-  
   useEffect(() => {
     function handleScroll() {
       // Se rolou mais de 50px, ativa o fundo escuro na navbar
@@ -16,50 +15,71 @@ function Header({ onAgendar }) {
       }
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-   
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- 
   function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuaberto(false);
     }
   }
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-
         {/* Logo no canto esquerdo */}
         <div className={styles.logo}>
           <span className={styles.logoText}>Barbearia</span>
           <span className={styles.logoDestaque}> Ryan</span>
         </div>
 
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuaberto(!menuAberto)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         {/* Links de navegação no canto direito */}
-        <nav className={styles.nav}>
-          <button onClick={() => scrollToSection('home')} className={styles.navLink}>
+        <nav className={`${styles.nav} ${menuAberto ? styles.navAberto : ""}`}>
+          <button
+            onClick={() => scrollToSection("home")}
+            className={styles.navLink}
+          >
             Home
           </button>
-          <button onClick={() => scrollToSection('servicos')} className={styles.navLink}>
+          <button
+            onClick={() => scrollToSection("servicos")}
+            className={styles.navLink}
+          >
             Serviços
           </button>
-          <button onClick={() => scrollToSection('unidade')} className={styles.navLink}>
+          <button
+            onClick={() => scrollToSection("unidade")}
+            className={styles.navLink}
+          >
             Unidade
           </button>
-          <button onClick={() => scrollToSection('contato')} className={styles.navLink}>
+          <button
+            onClick={() => scrollToSection("contato")}
+            className={styles.navLink}
+          >
             Contato
           </button>
           {/* Botão "Faça parte" leva para a seção de trabalhe conosco */}
-          <button onClick={() => scrollToSection('trabalhe')} className={styles.navLink}>
+          <button
+            onClick={() => scrollToSection("trabalhe")}
+            className={styles.navLink}
+          >
             Faça parte
           </button>
         </nav>
-
       </div>
     </header>
   );

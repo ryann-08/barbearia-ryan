@@ -1,13 +1,14 @@
-
 .header {
-  position: fixed;         
+  position: fixed;
   top: 0;
   left: 5%;
   width: 90%;
-  z-index: 100;         
+  z-index: 100;
   padding: 20px;
   background: transparent; /* Começa transparente */
-  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Transição suave */
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease; /* Transição suave */
   border-radius: 25px;
 }
 
@@ -16,7 +17,7 @@
   background: rgba(0, 0, 0, 0.322);
   backdrop-filter: blur(8px); /* Efeito de vidro fosco */
 }
- 
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -26,9 +27,8 @@
   justify-content: space-between;
 }
 
-
 .logo {
-  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -36,9 +36,8 @@
 }
 
 .logoDestaque {
-  color: #D4A853; /* Dourado */
+  color: #d4a853; /* Dourado */
 }
-
 
 .nav {
   display: flex;
@@ -46,12 +45,11 @@
   gap: 32px;
 }
 
-
 .navLink {
   background: none;
   border: none;
   color: #fff;
-  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   cursor: pointer;
@@ -60,5 +58,54 @@
 }
 
 .navLink:hover {
-  color: #D4A853; 
+  color: #d4a853;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .header {
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  .container {
+    padding: 0 16px;
+    flex-wrap: wrap;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 12px;
+  }
+  .navAberto {
+    display: flex;
+  }
+  .navLink {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
 }
