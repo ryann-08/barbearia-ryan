@@ -9,7 +9,7 @@ function Hero({ onAgendar }) {
       {/*  texto sobre a imagem */}
       <div className={styles.conteudo}>
         <h1 className={styles.titulo}>
-          Atendimento de{' '}
+          Atendimento de<br />{' '}
           <strong>qualidade</strong>, que<br />
          <strong> cabe no seu bolso</strong>
         </h1>

@@ -100,3 +100,17 @@
     grid-template-columns: 1fr; 
   }
 }
+@media (min-width: 769px) and (max-width: 1350px) {
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .cardRodape {
+    gap: 12px;
+  }
+
+  .preco {
+    font-size: 18px;
+  }
+}

@@ -85,12 +85,21 @@
 }
 
 /* Responsivo */
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
   .cabecalho {
     flex-direction: column;
     gap: 24px;
   }
+  .titulo {
+    font-size: 36px;
+    min-width: unset;
+    text-align: center;
+  }
 
+  .subtitulo {
+    max-width: unset;
+    text-align: center;
+  }
   .galeria {
     grid-template-columns: 1fr;
   }
